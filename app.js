@@ -5,7 +5,7 @@ const bodyParser = require('body-parser')
 
 
 // Set the port
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 5000
 // Boot the app
 const app = express()
 // Register the public directory
@@ -20,5 +20,5 @@ app.put('/products/:id', api.editProduct)
 app.delete('/products/:id', api.deleteProduct)
 app.post('/products', api.createProduct)
 // Boot the server
-app.listen(port, () => console.log(`Server listening on port ${port}`))
+app.listen(port, '0.0.0.0', () => console.log(`Server listening on port ${port}`))
 
